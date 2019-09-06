@@ -1,5 +1,5 @@
 1.Presequites:
-ChromeBrowser*, Maven, Java.
+ChromeBrowser, Maven, Java.
 
 2.Clone the project:
 git clone https://github.com/Berolfingen/ProvectusTask
