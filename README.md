@@ -5,4 +5,4 @@ ChromeBrowser, Maven, Java.
 git clone https://github.com/Berolfingen/ProvectusTask
 
 3.Open command line in the project folder and run tests with:
-mvn test
+mvn clean test
