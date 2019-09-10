@@ -1,14 +1,14 @@
 package main.uk.co.theautomatedtester.pages;
 
 import com.codeborne.selenide.SelenideElement;
-import com.codeborne.selenide.WebDriverRunner;
 
-import static com.codeborne.selenide.Selectors.byText;
+import static com.codeborne.selenide.Selectors.byXpath;
 import static com.codeborne.selenide.Selenide.$;
+import static com.codeborne.selenide.WebDriverRunner.source;
 
 public class Chapter1Page {
 
-    private SelenideElement linkToHomePage = $(byText("Home Page"));
+    private SelenideElement linkToHomePage = $(byXpath("//a[text() = 'Home Page']"));
 
     public void goToHomePage() {
         linkToHomePage.click();
@@ -16,10 +16,6 @@ public class Chapter1Page {
     }
 
     public boolean webPageHasText(String s) {
-        return getSourcePage().contains(s);
-    }
-
-    private String getSourcePage() {
-        return WebDriverRunner.source();
+        return source().contains(s);
     }
 }
